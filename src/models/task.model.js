@@ -3,19 +3,23 @@ const mongoose = require('../database');
 const TaskSchema = new mongoose.Schema({
     title: {
         type: String,
-        required: true
+        required: true,
+        uppercase: true,
     },
     description: {
         type: String,
         required: true,
+        uppercase: true,
     },
     category: {
         type: String,
         required: true,
+        uppercase: true,
     },
     status: {
         type: String,
         default: "Pending",
+        uppercase: true,
     },
     createdAt: {
         type: Date,
